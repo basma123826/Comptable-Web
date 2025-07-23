@@ -1,5 +1,4 @@
 import React from "react";
-import ContactBanner from "../components/ContactBanner";
 import contactBg from "../assets/contactBg.png";
 import "./ContactBanner.css";
 const ContactBanner =() => {
