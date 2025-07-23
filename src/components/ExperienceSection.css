@@ -1,0 +1,237 @@
+.experience-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  gap: 60px;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: white;
+}
+
+.experience-left {
+  position: relative;
+  width: 500px;
+  height: 480px;
+  left: -50px;
+}
+
+.background-img {
+width: 394px;
+height: 500px;
+top: 400px;
+left: -20px;
+border-radius: 20px;
+background: rgba(0, 0, 0, 0.31);
+border-radius: 20px;
+
+}
+
+.woman-img {
+  width: 1,216px;
+height: 400px;
+top: 1462px;
+margin-top: -55%;
+margin-left: 190px;
+margin-right: 250px;
+border-radius: 20px;
+}
+.experience-badge {
+  position: absolute;
+  top: -15px;
+  left: 190px;
+  background-color: #2f855a;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 18px;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+  text-align: center;
+}
+
+
+.flechee-svg {
+width: 73.60519498863349;
+height: 150.09602538840332;
+top: -30px;
+left: 388px;
+position: absolute;
+}
+
+.cerclev-svg {
+  position: absolute;
+  top: -20px;
+right: 40px;
+  width: 300px;
+}
+
+.experience-right {
+  flex: 1;
+  max-width: 520px;
+  position: relative;
+  z-index: 5;
+   font-size: 1.1em; /* Slightly larger font for readability */
+  color: #666; /* A soft grey for less prominence than headings */
+  line-height: 1.7; /* Increased line height for better readability */
+  margin-bottom: 35px; /* Space below the paragraph before the next element */
+}
+
+.decor-circle {
+ 
+  position: absolute;
+  top: -40px;
+  left: 455px;
+  width: 280px;
+  height: auto;
+  z-index: 0;
+}
+
+
+.tag {
+  background-color: #2b6cb0;
+  color: white;
+  font-weight: 438px;
+  display: inline-block;
+  padding: 1px 80px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  background: linear-gradient(90deg, #1B367C 41.5%, #3163E2 100%);
+  left: 739px;
+  top: 1502px;
+  border-radius: 50px;
+ 
+}
+
+.experience-right h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1a202c;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.experience-right h2 span {
+  color: #2b6cb0;
+}
+
+.experience-right p {
+  color: #4a5568;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.experience-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10 px;
+  padding: 15px 30px;
+  background-color: white;
+  color: #1a202c;
+  font-size: 19px;
+  border: 2px solid #49b57d;
+  border-radius: 60px;
+  cursor: pointer;
+  height: 60.19px; 
+  top: 1978px;
+    
+}
+
+.experience-btn:hover {
+  background-color: #49b57d;
+  color: white;
+}
+
+.arrow-circle img {
+  height: 44.8px;
+  width: 44.8px;
+  left: 1034px; 
+  top: 1984.2;
+}
+.show-circle{
+  position: absolute;
+  top: -40px;
+  left: 455px;
+  width: 280px;
+  height: auto;
+  z-index: 0;
+}
+.experience-title {
+  
+  font-size: 40px;
+  text-transform: capitalize;
+  line-height: 110%;
+  color: #1B367C; /* Bleu utilisé dans ton tag aussi */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+ .experience-description {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400px;
+  font-size: 100px;
+  line-height: 1.66px;              /* 166% transformé en valeur décimale */
+  color: #898989;
+  max-width: 623px;               /* même largeur que sur Figma */
+  margin-bottom: 2rem;
+  text-shadow: none;
+}
+
+
+@media (max-width: 768px) {
+  .experience-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .experience-left {
+    width: 100%;
+    height: auto;
+  }
+
+  .background-img {
+   width: 394;
+   height: 512;
+   top: 1462px;
+  left: 162px;
+  border-radius: 20px; 
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.31);
+
+
+  }
+
+  .woman-img {
+   width: 306;
+height: 380;
+top: 1696px;
+left: 352px;
+border-radius: 20px;
+opacity: 1;
+
+  }
+
+  .experience-badge {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+  }
+
+  .experience-right {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+.contact-banner {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 60, 0.5); /* dark overlay */
+  padding: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.underline {
+  margin: 10px auto 0;
+  width: 100px;
+  height: 2px;
+  background-color: white;
+}
+

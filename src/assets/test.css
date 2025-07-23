@@ -1,0 +1,80 @@
+/* Style global */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Header */
+.app-header {
+  background-color: #282c34;
+  padding: 20x;
+  color: white;
+}
+
+.logo-image {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Formulaire */
+.name-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.name-input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%;
+  min-width: 200px;
+}
+
+.submit-button,
+.reset-button {
+  padding: 10px 20px;
+  background-color: #61dafb;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.reset-button:hover {
+  background-color: #21a1f1;
+}
+
+/* Message */
+.welcome-message {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  padding: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+}

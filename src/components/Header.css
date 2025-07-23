@@ -1,0 +1,123 @@
+/* Base desktop styles */
+header {
+  background-color: #20214f;
+  padding: 20px 0;
+}
+
+.header-container {
+  background: white;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 24px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1e1e3f;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  position: relative;
+}
+
+.nav a.active {
+  color: #4caf88;
+  font-weight: bold;
+}
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #4caf88;
+  bottom: -5px;
+  left: 0;
+}
+
+.contact-btn {
+  background-color: #4caf88;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+
+/* Large tablets and small desktops (up to 1024px) */
+@media screen and (max-width: 1024px) {
+  .header-container {
+    padding: 15px 20px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+}
+
+/* Tablets (up to 768px) */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .contact-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+/* Mobile phones (up to 480px) */
+@media screen and (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
