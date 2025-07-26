@@ -1,18 +1,19 @@
-import React from "react";
-import Header from "../components/Header";
-import ContactBanner from "../components/ContactBanner";
-function About() {
+import React from 'react';
+import Header from '../components/Header';
+import ContactBanner from '../components/ContactBanner';
+import ContactForm from '../components/ContactForm';
+
+const About = () => {
   return (
-    <div>
-       <Header/>
-       <ContactBanner/>
-      <h1>About Page</h1>
-      <p>This is the about page.</p>
-     
-    </div>
+    <>
+      <Header />
+      <ContactBanner/>
+      <ContactForm/>
+    </>
   );
-}
+};
 
 export default About;
+
 
 

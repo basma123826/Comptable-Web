@@ -4,7 +4,7 @@ import About from "./Pages/About";
 
 function App() {
   return (
-    <BrowserRouter basename="/Comptable">
+    <BrowserRouter basename="/Comptable-Web">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -14,4 +14,3 @@ function App() {
 }
 
 export default App;
-

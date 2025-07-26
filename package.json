@@ -4,18 +4,17 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "start": "react-scripts start",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "dev": "vite --base /Comptable-Web/"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^7.7.0",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^7.7.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",

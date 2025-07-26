@@ -1,31 +1,70 @@
-.contact-banner {
+.contact-banner-section {
+  position: absolute; /* car top: 230px */
+  top: 108px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1512px;
+  height: 322px;
   background-size: cover;
   background-position: center;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  background-repeat: no-repeat;
 }
 
 .overlay {
-  background-color: rgba(0, 0, 60, 0.5); /* dark overlay */
-  padding: 40px;
-  width: 100%;
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 11, 86, 0.51);
+  opacity: 1;
+  z-index: 0;
+}
+
+.contact-banner-content {
+  position: relative;
+  z-index: 1;
   text-align: center;
-}
-
-.overlay h1 {
   color: white;
-  font-size: 32px;
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.contact-banner-title {
+  font-family: Outfit;
+font-weight: 700;
+font-style: Bold;
+font-size: 50px;
+line-height: 110.00000000000001%;
+letter-spacing: 0%;
+text-transform: capitalize;
+
+}
+
+  .line-decor {
+  width: 830.5537109375;
+  height: 5.169421672821045;
+  border-radius: 141.6px;
+  angle: -180 deg;
+  opacity: 1;
+  top: 330.69px;
+  left: 330px;
   margin: 0;
-}
+  }
 
-.underline {
-  margin: 10px auto 0;
-  width: 100px;
-  height: 2px;
-  background-color: white;
-}
+@media (max-width: 768px) {
+  .contact-banner-section {
+    width: 100%;
+    left: 0;
+    transform: none;
+    height: auto;
+  }
 
+  .contact-banner-title {
+    font-size: 1.8rem;
+  }
+
+  .line-decor {
+    width: 80px;
+  }
+}

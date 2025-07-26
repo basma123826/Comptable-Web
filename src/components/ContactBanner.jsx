@@ -1,15 +1,24 @@
 import React from "react";
-import contactBg from "../assets/contactBg.png";
 import "./ContactBanner.css";
-const ContactBanner =() => {
-   return(
-   <div className="contact-banner"
-   style={{backgroundImage:`url(${contactBg})`}}>
-      <div className="overlay">
-    <h2> Prenez Contact Avec Nous</h2>
-   <div className="underline"></div>
+import bgImage from "../assets/img_untitled_design_32_1.png";
+import ligneTop from "../assets/svg/ligneHall.svg";
+import ligneBottom from "../assets/svg/lineBas.svg";
+
+const ContactBanner = () => {
+  return (
+    <section
+      className="contact-banner-section"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <div className="overlay"></div>
+
+      <div className="contact-banner-content">
+        <img src={ligneTop} alt="Ligne décorative haut" className="line-decor" />
+        <h1 className="contact-banner-title">Prenez Contact Avec Nous</h1>
+        <img src={ligneBottom} alt="Ligne décorative bas" className="line-decor" />
       </div>
-    </div>
-   );
+    </section>
+  );
 };
+
 export default ContactBanner;

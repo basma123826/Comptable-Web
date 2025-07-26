@@ -1,0 +1,49 @@
+.contact-form-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-title span {
+  display: block;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  font-size: 16px;
+  border: 1px solid ;
+  border-radius: 6px;
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+}
