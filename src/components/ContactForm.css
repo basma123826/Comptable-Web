@@ -1,49 +1,93 @@
+.contact-section {
+  padding: 300px 100px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ⛔️ تم إزالة الخلفية البيضاء والإطار والظل */
 .contact-form-container {
   text-align: center;
-  padding: 40px 20px;
+  max-width: 1020px;
+  width: 100%;
+  /* background: white; */ /* تم التعليق */
+  /* padding: 140px 200px; */ /* تم التعليق */
+  /* border-radius: 12px; */ /* تم التعليق */
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); */ /* تم التعليق */
+  top: 100px;
 }
 
 .contact-title {
-  font-size: 24px;
+  font-size: 41px;
   font-weight: 700;
-  margin-bottom: 30px;
   color: #333;
+  margin-bottom: 40px;
+  line-height: 1.4;
 }
 
 .contact-title span {
-  display: block;
-  font-weight: 500;
-  margin-top: 5px;
+  font-weight:700;
+  font-size: 41px;
+  margin-bottom: 40px;
 }
 
 .contact-form {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .form-row {
   display: flex;
-  gap: 20px;
+  gap: 90px;
   margin-bottom: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .input-group {
   position: relative;
   flex: 1;
-  min-width: 280px;
+  min-width: 300px;
 }
 
-.input-group input {
+.input-group input,
+.input-group textarea {
   width: 100%;
-  padding: 12px 40px 12px 12px;
+  padding: 14px 50px 14px 16px;
   font-size: 16px;
-  border: 1px solid ;
-  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
 }
 
 .input-group .icon {
   position: absolute;
-  right: 12px;
+  right: -20px;
   top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.submit-button {
+  background: linear-gradient(to right, #28a745, #218838);
+  color: white;
+  padding: 19px 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #218838, #1e7e34);
 }
