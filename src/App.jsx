@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-
 function App() {
   return (
     <BrowserRouter basename="/Comptable-Web">
@@ -10,6 +9,8 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
+    
+    
   );
 }
 
