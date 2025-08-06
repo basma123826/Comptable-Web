@@ -1,0 +1,77 @@
+/* src/styles/ContactInfo.css */
+.contact-info-card {
+    background-color: #1a237e; /* أزرق غامق مشابه للصورة */
+    border-radius: 15px; /* زوايا دائرية */
+    padding: 30px;
+    color: #ffffff;
+    width: 400px; /* عرض ثابت تقريبي */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-info-card h3 {
+    font-size: 1em;
+    color: #cccccc;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* align items to top */
+    gap: 15px;
+}
+
+.contact-item .icon {
+    font-size: 1.5em; /* حجم الأيقونة */
+    color: #4CAF50; /* لون الأيقونات (أخضر أو أبيض حسب اختيارك) */
+    min-width: 25px; /* لتثبيت مكان الأيقونة */
+    text-align: center;
+}
+
+.contact-details h4 {
+    font-size: 1.1em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.contact-details p {
+    font-size: 0.95em;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center; /* لتوسيط الأيقونات الاجتماعية */
+}
+
+.social-icon-link {
+    color: #fff;
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+    text-decoration: none; /* لإزالة التسطير من الروابط */
+}
+
+.social-icon-link:hover {
+    transform: translateY(-3px);
+    color: #4CAF50; /* لون عند التحويم */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-info-card {
+        width: 90%; /* عرض مرن على الشاشات الصغيرة */
+        padding: 20px;
+    }
+}

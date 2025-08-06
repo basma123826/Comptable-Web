@@ -1,0 +1,207 @@
+:root {
+    --primary-green: #27ae60; /* La couleur verte principale */
+    --text-dark: #333;
+    --text-medium: #666;
+    --bg-light: #f4f4f4;
+    --card-bg: #f9f9f9;
+    --white: #fff;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* You can change this font */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top, not center of viewport */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.main-container {
+    width: 90%;
+    max-width: 1200px; /* Max width as seen in the image */
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--shadow-medium);
+    overflow: hidden; /* Ensures child elements don't break rounded corners */
+    padding: 30px; /* Padding inside the main white container */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    margin: 40px auto; /* Center the container with some top/bottom margin */
+}
+
+.hero-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.separator {
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 20px auto; /* Center the separator */
+}
+
+.expertise-section {
+    padding: 30px 0;
+}
+
+.expertise-section h2 {
+    font-size: 2em;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.expertise-grid {
+    display: grid;
+    /* This creates columns that are at least 300px wide, and as many as fit */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between grid items */
+    align-items: stretch; /* Ensures all cards stretch to the same height in a row */
+}
+
+.expertise-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between elements inside the card */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.card-number {
+    font-size: 2em;
+    color: var(--primary-green);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.expertise-card h3 {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.expertise-card p {
+    color: var(--text-medium);
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.image-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: Remove padding if image should fill card completely */
+    padding: 0;
+    overflow: hidden; /* Ensure image corners respect card border-radius */
+}
+
+.image-card img {
+    width: 100%; /* Image takes full width of its container */
+    height: 100%; /* Image takes full height of its container */
+    object-fit: cover; /* Ensures image covers the area without distorting */
+    border-radius: 8px; /* Match card border-radius */
+    display: block; /* Remove extra space below image */
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .main-container {
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    .expertise-section h2 {
+        font-size: 1.8em;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min-width */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .expertise-section h2 {
+        font-size: 1.6em;
+        margin-bottom: 25px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr; /* Stack all cards vertically */
+    }
+
+    .expertise-card {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .card-number {
+        font-size: 1.8em;
+    }
+
+    .expertise-card h3 {
+        font-size: 1.2em;
+    }
+
+    .expertise-card p {
+        font-size: 0.9em;
+    }
+
+    .image-card img {
+        height: 250px; /* Give a fixed height on smaller screens for image card */
+        object-fit: contain; /* or 'contain' if you don't want it cropped */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    .expertise-section h2 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+}

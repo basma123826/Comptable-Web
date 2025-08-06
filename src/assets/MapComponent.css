@@ -1,0 +1,65 @@
+/* src/styles/MapComponent.css */
+.map-container-wrapper {
+    width: 700px; /* عرض الخريطة */
+    height: 500px; /* ارتفاع الخريطة */
+    border-radius: 15px; /* زوايا دائرية */
+    overflow: hidden; /* ضروري لضمان ظهور الزوايا الدائرية */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative; /* لتحديد موقع الخلفية الزرقاء في الزاوية */
+    background-color: #2a3a8e; /* لون أزرق إضافي للخلفية */
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* تطبق على الخريطة داخل الـ wrapper */
+    z-index: 1; /* باش تكون الخريطة فوق الخلفية الزرقاء */
+}
+
+/* الأشكال الزرقاء في الزاوية (إذا كنت تريدها) */
+.map-container-wrapper::before {
+    content: '';
+    position: absolute;
+    bottom: -50px; /* Adjust as needed */
+    right: -50px; /* Adjust as needed */
+    width: 150px;
+    height: 150px;
+    background-color: #2a3a8e; /* لون أزرق أغمق */
+    border-radius: 50%; /* لجعلها دائرة */
+    z-index: 0;
+    opacity: 0.7; /* شفافية خفيفة */
+}
+
+.map-container-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: -30px; /* Adjust as needed */
+    width: 80px;
+    height: 80px;
+    background-color: #2a3a8e; /* لون أزرق أغمق */
+    transform: rotate(45deg); /* لجعلها مربع مائل */
+    z-index: 0;
+    opacity: 0.5;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .map-container-wrapper {
+        width: 90%; /* عرض مرن على الشاشات المتوسطة */
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-container-wrapper {
+        width: 100%; /* عرض كامل على الشاشات الصغيرة */
+        height: 300px;
+        border-radius: 10px;
+    }
+    .map-container-wrapper::before,
+    .map-container-wrapper::after {
+        display: none; /* إخفاء الأشكال الزخرفية على الشاشات الصغيرة */
+    }
+}

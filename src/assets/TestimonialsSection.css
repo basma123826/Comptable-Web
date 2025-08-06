@@ -1,0 +1,247 @@
+
+.testimonials-section {
+  background-color: #f8f8f8; /* Fond gris clair de la section */
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden; /* Pour cacher ce qui dépasse du carrousel */
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5em;
+  color: #091054; /* Couleur du titre principal */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-header .underline {
+  width: 755px;
+  height: 7px;
+  background-color:#58BD7D; /* Ligne verte sous le titre */
+   top: 3623px;
+  left: 378px;
+  border-radius: 164.35px;
+  motion-rotation: -180 deg;
+}
+
+.testimonials-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px; /* Largeur maximale du carrousel */
+  margin: 0 auto; /* Centre le carrousel */
+}
+
+.testimonials-wrapper {
+  display: flex;
+  gap: 30px; /* Espace entre les cartes */
+  /* Utilisation de overflow-x et scroll-snap pour un défilement manuel comme un carrousel */
+  overflow-x: auto; /* Permet le défilement horizontal */
+  scroll-snap-type: x mandatory; /* Force le défilement à s'arrêter sur les cartes */
+  -webkit-overflow-scrolling: touch; /* Améliore le défilement sur iOS */
+  padding-bottom: 20px; /* Espace pour la scrollbar si elle est présente */
+}
+
+/* Cache la scrollbar par défaut */
+.testimonials-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.testimonials-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+.testimonial-card {
+  flex: 1 1 calc(20% - 20px); /* 3 cartes par ligne, ajusté pour le gap */
+  min-width: 300px; /* Largeur minimale de chaque carte */
+  background-color: #ffffff; /* Fond par défaut (clair) */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 5 5px 15px #58BD7D(0, 0, 0, 0.08);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Distribue l'espace verticalement */
+  scroll-snap-align: start; /* Aligne le début de la carte lors du défilement */
+  transition: transform 0.3s ease-in-out; /* Pour animations futures si besoin */
+}
+
+.testimonial-card.dark {
+  background-color: #58BD7D; /* Fond vert pour la carte du milieu */
+  color: #ffffff; /* Texte blanc sur fond vert */
+}
+
+.testimonial-card .quote-icon {
+  font-size: 4em;
+  line-height: 1;
+  color: #58BD7D; /* Vert pour l'icône de citation sur fond clair */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.testimonial-card.dark .quote-icon {
+  color: #ffffff; /* Blanc pour l'icône de citation sur fond vert */
+}
+
+.testimonial-quote {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #525252; /* Couleur du texte sur fond clair */
+  margin-bottom: 25px;
+  flex-grow: 1; /* Permet au paragraphe de prendre l'espace disponible */
+}
+
+.testimonial-card.dark .testimonial-quote {
+  color: #e0e0e0; /* Couleur du texte sur fond vert */
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #58BD7D; /* Ligne séparatrice sur fond clair */
+  margin-bottom: 20px;
+}
+
+.testimonial-card.dark .separator {
+  background-color: rgba(255, 255, 255, 0.3); /* Ligne séparatrice sur fond vert */
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.client-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #58BD7D; /* Bordure verte autour de l'avatar */
+}
+
+.testimonial-card.dark .client-avatar {
+  border: 3px solid #58BD7D; /* Bordure blanche autour de l'avatar sur fond vert */
+}
+
+.client-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.client-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #58BD7D; /* Nom du client sur fond clair */
+  margin-bottom: 5px;
+}
+
+.testimonial-card.dark .client-name {
+  color: #ffffff; /* Nom du client sur fond vert */
+}
+
+.rating .star {
+  font-size: 2em;
+  margin-right: -3%;
+}
+
+.carousel-arrow {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #58BD7D;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  transition: background-color 0s, color 0.3s;
+}
+
+.carousel-arrow:hover {
+  background-color: #58BD7D;
+  color: #58BD7D;
+  border-color: #58BD7D;
+}
+
+.left-arrow {
+  left: -20px; /* Ajustez selon le besoin */
+}
+
+.right-arrow {
+  right: -20px; /* Ajustez selon le besoin */
+}
+
+
+/* Media Queries pour la réactivité */
+@media (max-width: 1200px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 15px); /* 2 cartes par ligne sur les écrans moyens */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .section-header h2 {
+    font-size: 2em;
+  }
+
+  .testimonial-card {
+    flex: 0 0 90%; /* Une seule carte visible à la fois sur les petits écrans */
+    margin: 0 auto; /* Centrer la carte */
+    padding: 25px;
+  }
+
+  .testimonials-wrapper {
+    justify-content: flex-start; /* Aligne au début pour le défilement */
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    left: 5px;
+    right: 5px;
+  }
+  .left-arrow {
+    left: 5px;
+  }
+  .right-arrow {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 40px 10px;
+  }
+
+  .section-header h2 {
+    font-size: 1.8em;
+  }
+
+  .testimonial-card {
+    min-width: 280px; /* Ajuste encore la taille minimale */
+    padding: 20px;
+  }
+
+  .testimonial-quote {
+    font-size: 1em;
+  }
+}

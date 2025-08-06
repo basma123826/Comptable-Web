@@ -1,0 +1,244 @@
+/* Styles généraux du corps (body) - Assurez-vous que ces styles ne sont pas écrasés ailleurs */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Ou votre police préférée */
+    background-color: #0b0c41; /* Couleur de fond bleu foncé principale */
+    color: white; /* Couleur du texte par défaut pour être visible sur le fond foncé */
+    /* Empêche le défilement si le contenu n'occupe pas toute la hauteur */
+    min-height: 100vh;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* Conteneur principal du composant NousContacter */
+.nous-contacter-container {
+    display: flex;
+    flex-direction: column; /* Empile le wrapper de contenu, le footer et le bouton */
+    justify-content: space-between; /* Pousse le footer vers le bas */
+    min-height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+    /* Dégradé de fond comme dans l'image originale */
+    background: linear-gradient(135deg, #0b0c41 60%, #1f206e 100%);
+    position: relative;
+    overflow: hidden; /* Cache tout ce qui dépasse du conteneur */
+    padding: 20px; /* Ajoute un peu de padding autour du contenu */
+    box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur totale */
+}
+
+/* Formes abstraites optionnelles pour l'arrière-plan (similaire à l'image) */
+.nous-contacter-container::before,
+.nous-contacter-container::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05); /* Superposition légère et transparente */
+  border-radius: 50%;
+  z-index: 0; /* Assurez-vous qu'elles sont derrière le contenu */
+}
+
+.nous-contacter-container::before {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+  transform: rotate(45deg); /* Ajuste la rotation pour la forme désirée */
+}
+
+.nous-contacter-container::after {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+  transform: rotate(-30deg); /* Ajuste la rotation pour la forme désirée */
+}
+
+/* Wrapper pour le contenu principal (sections gauche et droite) */
+.nous-contacter-content-wrapper {
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    flex-grow: 1; /* Permet d'occuper l'espace disponible */
+    width: 100%; /* S'assure qu'il s'étend sur tout le conteneur */
+    max-width: 1200px; /* Limite la largeur globale du contenu */
+    margin: 0 auto; /* Centre le wrapper */
+    padding: 40px 0; /* Padding vertical à l'intérieur du wrapper */
+    z-index: 1; /* Assure que le contenu est au-dessus des formes d'arrière-plan */
+    /* Si le contenu est toujours invisible, essayer de mettre une couleur de fond ici temporairement */
+    /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+/* Section Gauche */
+.left-section {
+  flex: 1; /* Prend l'espace disponible */
+  padding-right: 40px;
+  max-width: 500px; /* Limite la largeur du contenu textuel */
+  /* Couleur du texte spécifique pour cette section si le blanc par défaut du body n'est pas suffisant */
+  color: white;
+}
+
+.title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  position: relative; /* Pour l'effet de ligne blanche */
+  display: inline-block; /* S'assure que la ligne ne s'étend que sur le texte */
+  color: white; /* Assurez-vous que le titre est blanc */
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Ajuste la position de la ligne */
+  width: 80%; /* Longueur de la ligne */
+  height: 5px; /* Épaisseur de la ligne */
+  background-color: white; /* Couleur de la ligne */
+}
+
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: white; /* Assurez-vous que la description est blanche */
+}
+
+/* Section Droite (Formulaire) */
+.right-section {
+  background-color: #272870; /* Bleu légèrement plus clair pour l'arrière-plan du formulaire */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 450px; /* Largeur fixe pour le conteneur du formulaire */
+  /* Assurez-vous que le titre du formulaire est visible */
+  
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  color: white; /* Assurez-vous que le titre du formulaire est blanc */
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+  gap: 20px; /* Espace entre les champs de saisie */
+}
+
+.input-field {
+  flex: 1 1 calc(50% - 10px); /* Deux colonnes, en tenant compte de l'espace */
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ede9e9; /* Blanc cassé pour les champs de saisie */
+  color: #333; /* Couleur du texte à l'intérieur des champs */
+  font-size: 1em;
+  box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur totale */
+}
+
+/* Le champ de numéro de téléphone prend toute la largeur */
+.input-field:nth-child(3) {
+    flex-basis: 100%;
+}
+
+.submit-button {
+  flex: 1 1 calc(50% - 10px); /* Deux colonnes, en tenant compte de l'espace */
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5cb85c; /* Bouton Soumettre vert */
+  color: white; /* Couleur du texte du bouton */
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur totale */
+}
+
+.submit-button:hover {
+  background-color: #4cae4c; /* Vert plus foncé au survol */
+}
+
+/* Styles du Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7); /* Texte légèrement transparent */
+    margin-top: auto; /* Pousse le footer vers le bas */
+    z-index: 1; /* Assure que le footer est au-dessus des formes d'arrière-plan */
+}
+
+/* Bouton de retour en haut */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #5cb85c; /* Bouton vert */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 100; /* Assure qu'il est au-dessus de tout */
+}
+
+.scroll-to-top:hover {
+    background-color: #4cae4c;
+    transform: translateY(-3px);
+}
+
+/* Ajustements Responsifs */
+@media (max-width: 900px) {
+  .nous-contacter-content-wrapper {
+    flex-direction: column; /* Empile les sections verticalement sur les petits écrans */
+    padding: 20px 0; /* Ajuste le padding vertical */
+  }
+
+  .left-section {
+    padding-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%); /* Centre la ligne */
+  }
+
+  .right-section {
+    width: 100%; /* Pleine largeur sur les petits écrans */
+    max-width: 450px; /* Maintient la largeur maximale */
+  }
+
+  .input-field {
+    flex-basis: 100%; /* Les inputs prennent toute la largeur sur les petits écrans */
+  }
+  .submit-button {
+      flex-basis: 100%; /* Le bouton prend toute la largeur sur les petits écrans */
+  }
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: 2.2em;
+    }
+    .description {
+        font-size: 1em;
+    }
+    .right-section {
+        padding: 20px;
+    }
+    .form-title {
+        font-size: 1.3em;
+    }
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2em;
+        bottom: 20px;
+        right: 20px;
+    }
+}
