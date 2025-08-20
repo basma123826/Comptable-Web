@@ -1,42 +1,55 @@
 .contact-section {
-  padding: 300px 100px;
-  background: #f9f9f9;
+  padding:  0 100px 70px 70px; /* supprime le 150px top */
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto; /* plus besoin de 100vh */
+}
+
+
+/* ⛔️ تم إزالة الخلفية البيضاء والإطار والظل */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100%; /* plus besoin de 100% */
+  transform: none; /* supprime translateX(-40px) */
 }
 
-/* ⛔ تم إزالة الخلفية البيضاء والإطار والظل */
-.contact-form-container {
-  text-align: center;
-  max-width: 1020px;
-  width: 100%;
-  /* background: white; / / تم التعليق */
-  /* padding: 140px 200px; / / تم التعليق */
-  /* border-radius: 12px; / / تم التعليق */
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); / / تم التعليق */
-  top: 100px;
-}
+
 
 .contact-title {
-  font-size: 30px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  margin-top: 344px;
+  font-weight: 600;
   line-height: 1.4;
 }
 
-.contact-title span {
-  font-weight:700;
-  font-size: 30px;
-  margin-bottom: 40px;
-  top: 30px;
+.contact-title h2 {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.3;
 }
 
+
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  top: 30px;
+  transform: scale(1.4); /* تكبير فقط */
+  margin-top: 189px; /* الفورم يحبط وكيخلي المسافة مع العنوان */
 }
+
+
+
+
 
 .form-row {
   display: flex;
@@ -65,7 +78,7 @@
 
 .input-group .icon {
   position: absolute;
-  right: -20px;
+  right: -40px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
@@ -88,6 +101,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  top: 30%;
 }
 
 .submit-button:hover {

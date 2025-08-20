@@ -11,7 +11,6 @@ import  svgLocalisation from'../assets/svg/svgLocalisation.svg';
 function Footer() {
   return (
 <section className='footerSection'>
-
 <div className="contact-container">
         <div className="contact-left">
   <div class="ligne-degradee"></div>

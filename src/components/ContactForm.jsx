@@ -9,11 +9,12 @@ import './ContactForm.css';
 const ContactForm = () => {
   return (
     <section className="contact-section">
+      {/* Cercle décoratif */}
       <div className="contact-form-container">
-        <h2 className="contact-title">
-          Vous Voulez Améliorer Votre Entreprise ?<br />
-          <span>Contactez-Nous Dès Aujourd’hui !</span>
-        </h2>
+       <h2 className="contact-title">
+  Vous Voulez Améliorer Votre Entreprise ?<br/>
+  <span>Contactez-Nous Dès Aujourd’hui !</span>
+</h2>
 
         <form className="contact-form">
           <div className="form-row">
@@ -48,4 +49,5 @@ const ContactForm = () => {
     </section>
   );
 };
+
 export default ContactForm;
